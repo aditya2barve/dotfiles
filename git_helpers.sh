@@ -23,3 +23,23 @@ function gcp() {
     git push
 }
 
+function branch_here() {
+    username=`git config user.email | cut -d '@' -f 1`
+    full_branch_name=users/$username/$1
+    git checkout -b $full_branch_name
+    git push --set-upstream origin $full_branch_name
+}
+
+function branch() {
+    git checkout master
+    branch_here $1
+}
+
+function rebase() {
+    current_branch=`git branch --show-current`
+    git checkout master
+    git pull
+    git checkout $current_branch
+    git rebase master
+}
+
