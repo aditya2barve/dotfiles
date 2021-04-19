@@ -11,3 +11,8 @@ function gc() {
     git commit -m "${message:-update}"
 }
 
+function gca() {
+    git add -A
+    gc $@
+}
+
