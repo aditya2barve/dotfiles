@@ -6,3 +6,8 @@ alias gll="git log -1 HEAD"
 alias glo="git log -20 --oneline"
 alias gs="git status"
 
+function gc() {
+    message="$@"
+    git commit -m "${message:-update}"
+}
+
