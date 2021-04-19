@@ -1,3 +1,5 @@
+#!/bin/bash
+
 alias ga="git add"
 alias gcu="git reset HEAD~1"
 alias gd="git diff"
