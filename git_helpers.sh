@@ -55,3 +55,8 @@ function rpnew() {
     git push --set-upstream origin master
 }
 
+function rpshow() {
+    url=`git remote get-url origin`
+    open_in_browser $url
+}
+
