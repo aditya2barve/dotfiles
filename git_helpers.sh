@@ -16,3 +16,8 @@ function gca() {
     gc $@
 }
 
+function gcp() {
+    gca $@
+    git push
+}
+
