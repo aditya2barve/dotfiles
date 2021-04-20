@@ -14,3 +14,5 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap Q <nop>
 
+iabbrev @@ aditya2barve@gmail.com
+
