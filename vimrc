@@ -9,3 +9,7 @@ set shiftround
 " https://github.com/tomasiser/vim-code-dark
 colorscheme codedark
 
+let mapleader = " "
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
