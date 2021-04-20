@@ -42,3 +42,13 @@ hi DiffText     ctermfg=Yellow ctermbg=NONE
 set splitright
 set splitbelow
 
+set rtp+=~/.fzf
+nnoremap <leader>f :Files<cr>
+nnoremap <leader>g :Rg<cr>
+
+" change window focus
+nnoremap <leader>h <c-w><c-h>
+nnoremap <leader>j <c-w><c-j>
+nnoremap <leader>k <c-w><c-k>
+nnoremap <leader>l <c-w><c-l>
+
