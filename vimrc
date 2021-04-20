@@ -23,8 +23,8 @@ vnoremap ( di()<esc>P
 vnoremap { di{}<esc>P
 vnoremap < di<><esc>P
 " comment and uncomment visual selection
-autocmd FileType vim vnoremap / :norm 0i" <cr>gv
-autocmd FileType python vnoremap / :norm 0i# <cr>gv
+autocmd FileType vim vnoremap / :norm I" <cr>gv
+autocmd FileType python vnoremap / :norm I# <cr>gv
 vnoremap x :norm 0x"<cr>gv
 
 " highlight trailing whitespace
