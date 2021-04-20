@@ -9,6 +9,7 @@ export HISTCONTROL=ignoreboth
 
 [ -f $DOTFILES/utils.sh ] && source $DOTFILES/utils.sh
 [ -f $DOTFILES/git_helpers.sh ] && source $DOTFILES/git_helpers.sh
+[ -f $DOTFILES/.fzf.bash ] && source ~/.fzf.bash
 
 alias python='python3'
 alias pip='python -m pip'
