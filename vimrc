@@ -33,3 +33,9 @@ vnoremap x :norm 0x"<cr>gv
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
 
+" add colors for vimdiff
+hi DiffAdd      ctermfg=Green ctermbg=NONE
+hi DiffDelete   ctermfg=Red ctermbg=NONE
+hi DiffChange   ctermfg=DarkGray ctermbg=NONE
+hi DiffText     ctermfg=Yellow ctermbg=NONE
+
