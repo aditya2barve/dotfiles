@@ -39,3 +39,6 @@ hi DiffDelete   ctermfg=Red ctermbg=NONE
 hi DiffChange   ctermfg=DarkGray ctermbg=NONE
 hi DiffText     ctermfg=Yellow ctermbg=NONE
 
+set splitright
+set splitbelow
+
