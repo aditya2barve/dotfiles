@@ -6,8 +6,10 @@ set tabstop=4 softtabstop=4 shiftwidth=4
 set expandtab
 set shiftround
 
-" https://github.com/tomasiser/vim-code-dark
-colorscheme codedark
+" theme
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
+set bg=dark
 
 let mapleader = " "
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
