@@ -41,6 +41,7 @@ hi DiffText     ctermfg=Yellow ctermbg=NONE
 
 set splitright
 set splitbelow
+set scrolloff=8
 
 set rtp+=~/.fzf
 nnoremap <leader>f :Files<cr>
@@ -59,4 +60,8 @@ nnoremap z0  :set foldlevel=0<CR><Esc>
 nnoremap z1  :set foldlevel=1<CR><Esc>
 nnoremap z2  :set foldlevel=2<CR><Esc>
 nnoremap z9  :set foldlevel=9<CR><Esc>
+
+" terminal commands
+nnoremap <leader>t :vert ter<cr>
+tnoremap <esc> <c-w>N
 
