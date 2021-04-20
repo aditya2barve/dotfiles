@@ -16,3 +16,10 @@ nnoremap Q <nop>
 
 iabbrev @@ aditya2barve@gmail.com
 
+" enclose visual selection
+vnoremap ' di''<esc>P
+vnoremap " di""<esc>P
+vnoremap ( di()<esc>P
+vnoremap { di{}<esc>P
+vnoremap < di<><esc>P
+
