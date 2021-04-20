@@ -6,6 +6,8 @@ source ~/repos/dotfiles/bashrc
 " >> ~/.bashrc
 
 ln -s ~/repos/dotfiles/vimrc ~/.vimrc
+
+mkdir -p ~/.vim/colors/
 ln -s ~/repos/dotfiles/gruvbox.vim ~/.vim/colors/gruvbox.vim
 
 # configure vimdiff as git difftool
