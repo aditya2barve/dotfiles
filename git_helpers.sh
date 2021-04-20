@@ -9,21 +9,28 @@ alias gll="git log -1 HEAD"
 alias glo="git log -20 --oneline"
 alias gs="git status"
 
+# git commit
+# $@ is optional commit message
 function gc() {
     message="$@"
     git commit -m "${message:-update}"
 }
 
+# git commit all
+# $@ is optional commit message
 function gca() {
     git add -A
     gc $@
 }
 
+# git commit all and push. useful for quick fixes.
+# $@ is optional commit message
 function gcp() {
     gca $@
     git push
 }
 
+# $1 is branch name without prefix
 function branch_here() {
     username=`git config user.email | cut -d '@' -f 1`
     full_branch_name=users/$username/$1
@@ -31,11 +38,13 @@ function branch_here() {
     git push --set-upstream origin $full_branch_name
 }
 
+# $1 is branch name without prefix
 function branch() {
     git checkout master
     branch_here $1
 }
 
+# checkout master; pull; rebase current branch onto master
 function rebase() {
     current_branch=`git branch --show-current`
     git checkout master
