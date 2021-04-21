@@ -10,6 +10,9 @@ ln -s ~/repos/dotfiles/vimrc ~/.vimrc
 mkdir -p ~/.vim/colors/
 ln -s ~/repos/dotfiles/gruvbox.vim ~/.vim/colors/gruvbox.vim
 
+# vim snippets
+ln -s ~/repos/dotfiles/snippets ~/.vim/snippets
+
 # configure vimdiff as git difftool
 git config --global diff.tool vimdiff
 git config --global difftool.prompt false

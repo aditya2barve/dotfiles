@@ -66,3 +66,12 @@ nnoremap z9  :set foldlevel=9<CR><Esc>
 nnoremap <leader>t :vert ter<cr>
 tnoremap <esc> <c-w>N
 
+" snippets
+let maplocalleader=","
+nnoremap <localleader>html
+    \ :-1read ~/.vim/snippets/html/skeleton.txt<cr>jf<;i
+nnoremap <localleader>def
+    \ :-1read ~/.vim/snippets/python/function.txt<cr>wcw
+nnoremap <localleader>main
+    \ :-1read ~/.vim/snippets/python/main.txt<cr>
+
