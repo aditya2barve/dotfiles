@@ -24,6 +24,7 @@ vnoremap " di""<esc>P
 vnoremap ( di()<esc>P
 vnoremap { di{}<esc>P
 vnoremap < di<><esc>P
+
 " comment and uncomment visual selection
 autocmd FileType vim vnoremap / :norm I" <cr>gv
 autocmd FileType python vnoremap / :norm I# <cr>gv
