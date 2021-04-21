@@ -76,3 +76,8 @@ nnoremap <localleader>def
 nnoremap <localleader>main
     \ :-1read ~/.vim/snippets/python/main.txt<cr>
 
+"search
+set hlsearch
+set incsearch
+nnoremap // :noh<cr>
+
