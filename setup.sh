@@ -14,6 +14,13 @@ ln -s ~/repos/dotfiles/gruvbox.vim ~/.vim/colors/gruvbox.vim
 git config --global diff.tool vimdiff
 git config --global difftool.prompt false
 
+# install bat
+# download latest release from https://github.com/sharkdp/bat/releases
+# sudo dpkg -i bat*amd64.deb (for desktop)
+
+# install ripgrep
+# sudo apt-get install ripgrep
+
 # install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --completion --key-bindings --update-rc --no-zsh --no-fish
