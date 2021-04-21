@@ -25,5 +25,8 @@ git config --global difftool.prompt false
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --completion --key-bindings --update-rc --no-zsh --no-fish
 
+# install fzf for vim
+git clone --depth 1 https://github.com/junegunn/fzf.vim ~/.vim/pack/vendor/start/fzf.vim
+
 echo "setup complete!"
 
