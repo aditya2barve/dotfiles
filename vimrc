@@ -10,6 +10,7 @@ set shiftround
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 set bg=dark
+hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
 let mapleader = " "
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
