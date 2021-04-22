@@ -21,6 +21,8 @@ alias l="ls"
 alias ..="cd .."
 
 # show file tree without gitignored files
+# requires tree 1.8
+# install from: https://ubuntu.pkgs.org/20.04/ubuntu-universe-amd64/tree_1.8.0-1_amd64.deb.html
 alias fern="rg --files | tree --fromfile"
 
 # Setting ripgrep as the default source for fzf
