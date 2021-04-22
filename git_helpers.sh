@@ -9,6 +9,11 @@ alias gll="git log -1 --stat"
 alias glo="git log -20 --oneline"
 alias gs="git status"
 
+function gch() {
+    branch=$(git branch | fzf | sed 's/^..//')
+    git checkout $branch
+}
+
 # git commit
 # $@ is optional commit message
 function gc() {
