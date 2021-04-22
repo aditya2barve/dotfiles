@@ -20,6 +20,9 @@ alias cfv="vim ~/.vimrc"
 alias l="ls"
 alias ..="cd .."
 
+# show file tree without gitignored files
+alias fern="rg --files | tree --fromfile"
+
 # Setting ripgrep as the default source for fzf
 # reference for --no-require-git: https://stackoverflow.com/questions/60934191/gitignore-node-modules-not-working-for-fd-and-ripgrep
 export FZF_DEFAULT_COMMAND='rg --files --no-require-git'
