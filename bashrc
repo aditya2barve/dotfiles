@@ -36,3 +36,13 @@ alias fern="rg --files | tree --fromfile"
 export FZF_DEFAULT_COMMAND='rg --files --no-require-git'
 export FZF_DEFAULT_OPTS='-m --height 20% --border'
 
+function venv() {
+    if [ ! -z $VIRTUAL_ENV ]; then
+        echo "virtualenv is already active: $VIRTUAL_ENV"
+        return
+    fi
+    env_name=${1:-myenv}
+    [ -d $env_name ] || virtualenv $env_name
+    source $env_name/bin/activate
+}
+
