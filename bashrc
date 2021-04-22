@@ -1,5 +1,11 @@
 #!/bin/bash
 
+export REPOS_DIR=~/repos
+function gr() {
+    repo_name=$(ls $REPOS_DIR | fzf)
+    cd $REPOS_DIR/$repo_name
+}
+
 export DOTFILES=~/repos/dotfiles
 export RIPGREP_CONFIG_PATH=~/repos/dotfiles/ripgreprc
 export EDITOR=vim
