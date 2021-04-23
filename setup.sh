@@ -56,6 +56,7 @@ git clone https://github.com/neoclide/coc.nvim.git ~/.vim/pack/vendor/start/coc.
 
 # link coc settings
 # also install black and symlink `which black` to /usr/local/bin/black
+# also install isort and symlink `which isort` to /usr/local/bin/isort
 ln -s ~/repos/dotfiles/coc-settings.json ~/.vim/
 
 echo "setup complete!"
