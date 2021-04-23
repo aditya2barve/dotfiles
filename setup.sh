@@ -45,5 +45,14 @@ vim -u NONE -c "helptags commentary/doc" -c q
 # install repeat.vim
 git clone https://tpope.io/vim/repeat.git ~/.vim/pack/vendor/start/repeat
 
+# install coc.nvim
+# requires nodejs version 10+
+git clone https://github.com/neoclide/coc.nvim.git ~/.vim/pack/vendor/start/coc.nvim
+
+# coc-pyright requires nodejs version 12+
+# install nodejs on Ubuntu with the following two commands
+# sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+# sudo apt-get install -y nodejs
+
 echo "setup complete!"
 
