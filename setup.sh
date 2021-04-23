@@ -54,5 +54,9 @@ git clone https://github.com/neoclide/coc.nvim.git ~/.vim/pack/vendor/start/coc.
 # sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
 # sudo apt-get install -y nodejs
 
+# link coc settings
+# also install black and symlink `which black` to /usr/local/bin/black
+ln -s ~/repos/dotfiles/coc-settings.json ~/.vim/
+
 echo "setup complete!"
 
