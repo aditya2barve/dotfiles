@@ -33,8 +33,6 @@ Install these extensions.
 - coc-pyright 1.1.133
 - coc-json 1.3.4
 
-coc-pyright
-
 For coc-pyright, install and link black and isort:
 
 ```bash
