@@ -35,5 +35,12 @@ git clone --depth 1 https://github.com/junegunn/fzf.vim ~/.vim/pack/vendor/start
 git clone https://tpope.io/vim/surround.git ~/.vim/pack/vendor/start/surround
 vim -u NONE -c "helptags surround/doc" -c q
 
+# install commentary.vim
+git clone https://tpope.io/vim/commentary.git ~/.vim/pack/vendor/start/commentary
+vim -u NONE -c "helptags commentary/doc" -c q
+
+# install repeat.vim
+git clone https://tpope.io/vim/repeat.git ~/.vim/pack/vendor/start/repeat
+
 echo "setup complete!"
 

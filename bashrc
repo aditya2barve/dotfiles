@@ -17,8 +17,8 @@ export HISTCONTROL=ignoreboth
 [ -f $DOTFILES/git_helpers.sh ] && source $DOTFILES/git_helpers.sh
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-alias python='python3'
-alias pip='python -m pip'
+alias python="python3"
+alias pip="python -m pip"
 
 alias cfb="vim ~/.bashrc"
 alias cfv="vim ~/.vimrc"
@@ -34,8 +34,8 @@ alias fern="rg --files | tree --fromfile"
 
 # Setting ripgrep as the default source for fzf
 # reference for --no-require-git: https://stackoverflow.com/questions/60934191/gitignore-node-modules-not-working-for-fd-and-ripgrep
-export FZF_DEFAULT_COMMAND='rg --files --no-require-git'
-export FZF_DEFAULT_OPTS='-m --height 20% --border'
+export FZF_DEFAULT_COMMAND="rg --files --no-require-git"
+export FZF_DEFAULT_OPTS="-m --height 20% --border"
 
 function venv() {
     if [ ! -z $VIRTUAL_ENV ]; then
