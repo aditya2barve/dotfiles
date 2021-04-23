@@ -1,9 +1,12 @@
 #!/bin/bash
 
-echo "
-# adding dotfiles
-source ~/repos/dotfiles/bashrc
-" >> ~/.bashrc
+source_command="source ~/repos/dotfiles/bashrc"
+if [ $(grep -cx "$source_command" ~/.bashrc) -eq 0 ]; then
+    echo "$source_command" >> ~/.bashrc
+    echo "added to ~/.bashrc: '$source_command'"
+else
+    echo "already exists in ~/.bashrc: '$source_command'"
+fi
 
 ln -s ~/repos/dotfiles/vimrc ~/.vimrc
 
