@@ -20,13 +20,6 @@ ln -s ~/repos/dotfiles/snippets ~/.vim/
 git config --global diff.tool vimdiff
 git config --global difftool.prompt false
 
-# install bat
-# download latest release from https://github.com/sharkdp/bat/releases
-# sudo dpkg -i bat*amd64.deb (for desktop)
-
-# install ripgrep
-# sudo apt-get install ripgrep
-
 # install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --completion --key-bindings --update-rc --no-zsh --no-fish
@@ -46,17 +39,9 @@ vim -u NONE -c "helptags commentary/doc" -c q
 git clone https://tpope.io/vim/repeat.git ~/.vim/pack/vendor/start/repeat
 
 # install coc.nvim
-# requires nodejs version 10+
 git clone https://github.com/neoclide/coc.nvim.git ~/.vim/pack/vendor/start/coc.nvim
 
-# coc-pyright requires nodejs version 12+
-# install nodejs on Ubuntu with the following two commands
-# sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
-# sudo apt-get install -y nodejs
-
 # link coc settings
-# also install black and symlink `which black` to /usr/local/bin/black
-# also install isort and symlink `which isort` to /usr/local/bin/isort
 ln -s ~/repos/dotfiles/coc-settings.json ~/.vim/
 
 echo "setup complete!"
