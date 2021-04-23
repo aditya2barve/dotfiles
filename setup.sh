@@ -31,5 +31,9 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # install fzf for vim
 git clone --depth 1 https://github.com/junegunn/fzf.vim ~/.vim/pack/vendor/start/fzf.vim
 
+# install surround.vim
+git clone https://tpope.io/vim/surround.git ~/.vim/pack/vendor/start/surround
+vim -u NONE -c "helptags surround/doc" -c q
+
 echo "setup complete!"
 
