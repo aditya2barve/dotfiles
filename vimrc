@@ -26,9 +26,8 @@ vnoremap ( di()<esc>P
 vnoremap { di{}<esc>P
 
 " comment and uncomment visual selection
-autocmd FileType vim vnoremap / :norm I" <cr>gv
-autocmd FileType python vnoremap / :norm I# <cr>gv
-vnoremap x :norm 0x"<cr>gv
+autocmd FileType vim setlocal commentstring=\"%s
+autocmd FileType bash,python,sh setlocal commentstring=#%s
 
 " highlight trailing whitespace
 :highlight ExtraWhitespace ctermbg=red guibg=red
