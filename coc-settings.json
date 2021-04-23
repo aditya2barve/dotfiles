@@ -1,8 +1,8 @@
 {
     "coc.preferences.formatOnSaveFiletypes": ["python"],
-    "python.formatting.provider": "black",
+    "pyright.organizeimports.provider": "isort",
     "python.formatting.blackPath": "/usr/local/bin/black",
+    "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
-    "python.sortImports.path": "/usr/local/bin/isort",
-    "pyright.organizeimports.provider": "isort"
+    "python.sortImports.path": "/usr/local/bin/isort"
 }
