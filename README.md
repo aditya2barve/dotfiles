@@ -28,6 +28,7 @@ Install these extensions.
 
 - coc-markdownlint 1.11.1
 - coc-yaml 1.3.1
+- coc-vimlsp 0.12.2
 - coc-sh 0.6.0
 - coc-pyright 1.1.133
 - coc-json 1.3.4
