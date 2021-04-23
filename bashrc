@@ -22,6 +22,7 @@ alias pip='python -m pip'
 
 alias cfb="vim ~/.bashrc"
 alias cfv="vim ~/.vimrc"
+alias v="vim"
 
 alias l="ls"
 alias ..="cd .."
