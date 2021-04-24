@@ -38,6 +38,9 @@ vim -u NONE -c "helptags commentary/doc" -c q
 # install repeat.vim
 git clone https://tpope.io/vim/repeat.git ~/.vim/pack/vendor/start/repeat
 
+# install ReplaceWithRegister
+git clone https://github.com/vim-scripts/ReplaceWithRegister.git ~/.vim/pack/vendor/start/ReplaceWithRegister
+
 # install coc.nvim
 git clone https://github.com/neoclide/coc.nvim.git ~/.vim/pack/vendor/start/coc.nvim
 
