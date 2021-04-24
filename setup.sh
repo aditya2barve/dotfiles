@@ -44,5 +44,9 @@ git clone https://github.com/neoclide/coc.nvim.git ~/.vim/pack/vendor/start/coc.
 # link coc settings
 ln -s ~/repos/dotfiles/coc-settings.json ~/.vim/
 
+# install python3 syntax highlighting
+mkdir -p ~/.vim/syntax
+curl "https://raw.githubusercontent.com/vim-python/python-syntax/master/syntax/python.vim" -o ~/.vim/syntax/python.vim
+
 echo "setup complete!"
 

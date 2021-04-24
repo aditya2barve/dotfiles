@@ -192,3 +192,6 @@ endif
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Coc commands end ==========================================================================
+
+let g:python_highlight_all = 1
+
