@@ -5,6 +5,8 @@ set relativenumber
 set tabstop=4 softtabstop=4 shiftwidth=4
 set expandtab
 set shiftround
+set smartindent
+set backspace=indent,eol,start  " more powerful backspacing
 
 " theme
 let g:gruvbox_contrast_dark = 'hard'
