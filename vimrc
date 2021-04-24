@@ -68,11 +68,11 @@ tnoremap <esc> <c-w>N
 " snippets
 let maplocalleader=","
 nnoremap <localleader>html
-    \ :-1read ~/.vim/snippets/html/skeleton.txt<cr>jf<;i
+    \ :-1read ~/.vim/my-snippets/html/skeleton.txt<cr>jf<;i
 nnoremap <localleader>def
-    \ :-1read ~/.vim/snippets/python/function.txt<cr>wcw
+    \ :-1read ~/.vim/my-snippets/python/function.txt<cr>wcw
 nnoremap <localleader>main
-    \ :-1read ~/.vim/snippets/python/main.txt<cr>
+    \ :-1read ~/.vim/my-snippets/python/main.txt<cr>
 
 "search
 set hlsearch
