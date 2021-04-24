@@ -48,5 +48,12 @@ ln -s ~/repos/dotfiles/coc-settings.json ~/.vim/
 mkdir -p ~/.vim/syntax
 curl "https://raw.githubusercontent.com/vim-python/python-syntax/master/syntax/python.vim" -o ~/.vim/syntax/python.vim
 
+# teach vim to recognize Dockerfiles
+git clone https://github.com/ekalinin/Dockerfile.vim.git
+cd Dockerfile.vim
+make install
+cd ..
+rm -rf Dockerfile.vim
+
 echo "setup complete!"
 
