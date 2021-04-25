@@ -15,7 +15,7 @@ set bg=dark
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
 let mapleader = " "
-nnoremap <leader>ev :call SmartSplit($MYVIMRC)<cr>
+nnoremap <leader>ev :call OpenVimrc()<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap Q <nop>
 
@@ -64,7 +64,7 @@ nnoremap z2  :set foldlevel=2<CR><Esc>
 nnoremap z9  :set foldlevel=9<CR><Esc>
 
 " terminal commands
-nnoremap <leader>t :call SmartSplitTerminal()<cr>
+nnoremap <leader>t :call OpenTerminal()<cr>
 tnoremap <esc> <c-w>N
 
 " snippets
@@ -212,21 +212,20 @@ if has('macunix')
   nnoremap gx :call OpenURLUnderCursor()<CR>
 endif
 
-function! SmartSplit(filePath)
+function! SmartSplit()
   if winwidth('%') > 100
     execute "vsplit"
   else
     execute "split"
   endif
-  execute "e" a:filePath
 endfunction
 
-function! SmartSplitTerminal()
-    ":term ++curwin
-  if winwidth('%') > 100
-    execute "vsplit"
-  else
-    execute "split"
-  endif
+function! OpenTerminal()
+  call SmartSplit()
   execute "term ++curwin"
+endfunction
+
+function! OpenVimrc()
+  call SmartSplit()
+  execute "e" $MYVIMRC
 endfunction
