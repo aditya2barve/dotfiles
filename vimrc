@@ -214,18 +214,18 @@ endif
 
 function! SmartSplit()
   if winwidth('%') > 100
-    execute "vsplit"
+    :vsplit
   else
-    execute "split"
+    :split
   endif
 endfunction
 
 function! OpenTerminal()
   call SmartSplit()
-  execute "term ++curwin"
+  :term ++curwin
 endfunction
 
 function! OpenVimrc()
   call SmartSplit()
-  execute "e" $MYVIMRC
+  :e $MYVIMRC
 endfunction
