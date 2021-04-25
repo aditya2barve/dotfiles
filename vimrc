@@ -15,7 +15,7 @@ set bg=dark
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
 let mapleader = " "
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>ev :call SmartSplit($MYVIMRC)<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap Q <nop>
 
@@ -64,7 +64,7 @@ nnoremap z2  :set foldlevel=2<CR><Esc>
 nnoremap z9  :set foldlevel=9<CR><Esc>
 
 " terminal commands
-nnoremap <leader>t :vert ter<cr>
+nnoremap <leader>t :call SmartSplitTerminal()<cr>
 tnoremap <esc> <c-w>N
 
 " snippets
@@ -197,3 +197,23 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 let g:python_highlight_all = 1
 
+
+function! SmartSplit(filePath)
+  if winwidth('%') > 100
+    echo "split vertically!"
+    execute "belowright vsplit" a:filePath
+  else
+    echo "split horizontally!"
+    execute "belowright split" a:filePath
+  endif
+endfunction
+
+function! SmartSplitTerminal()
+  if winwidth('%') > 100
+    echo "split vertically!"
+    execute "vert term"
+  else
+    echo "split horizontally!"
+    execute "term"
+  endif
+endfunction
