@@ -198,6 +198,20 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 let g:python_highlight_all = 1
 
 
+" open link under cursor on MacOS
+" reference: https://github.com/vim/vim/issues/4738#issuecomment-714609892
+if has('macunix')
+  function! OpenURLUnderCursor()
+    let s:uri = matchstr(getline('.'), '[a-z]*:\/\/[^ >,;()]*')
+    let s:uri = shellescape(s:uri, 1)
+    if s:uri != ''
+      silent exec "!open '".s:uri."'"
+      :redraw!
+    endif
+  endfunction
+  nnoremap gx :call OpenURLUnderCursor()<CR>
+endif
+
 function! SmartSplit(filePath)
   if winwidth('%') > 100
     echo "split vertically!"
