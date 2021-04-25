@@ -214,20 +214,19 @@ endif
 
 function! SmartSplit(filePath)
   if winwidth('%') > 100
-    echo "split vertically!"
-    execute "belowright vsplit" a:filePath
+    execute "vsplit"
   else
-    echo "split horizontally!"
-    execute "belowright split" a:filePath
+    execute "split"
   endif
+  execute "e" a:filePath
 endfunction
 
 function! SmartSplitTerminal()
+    ":term ++curwin
   if winwidth('%') > 100
-    echo "split vertically!"
-    execute "vert term"
+    execute "vsplit"
   else
-    echo "split horizontally!"
-    execute "term"
+    execute "split"
   endif
+  execute "term ++curwin"
 endfunction
