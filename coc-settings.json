@@ -4,5 +4,6 @@
     "python.formatting.blackPath": "/usr/local/bin/black",
     "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
-    "python.sortImports.path": "/usr/local/bin/isort"
+    "python.sortImports.path": "/usr/local/bin/isort",
+    "java.home": "/Library/Java/JavaVirtualMachines/jdk-15.jdk/Contents/Home"
 }
