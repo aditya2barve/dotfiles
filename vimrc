@@ -229,3 +229,15 @@ function! OpenVimrc()
   call SmartSplit()
   :e $MYVIMRC
 endfunction
+
+function! SmartFold()
+  if line('$') < winheight('%')
+    " expand all folds
+    :normal z9
+  else
+    " fold all levels
+    :normal z0
+  endif
+endfunction
+
+autocmd VimEnter * :call SmartFold()
