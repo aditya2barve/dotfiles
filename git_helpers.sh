@@ -21,6 +21,15 @@ function gc() {
     git commit -m "${message:-update}"
 }
 
+# git commit all tracked files and push. useful for quick fixes.
+# note: excludes untracked files
+# $@ is optional commit message
+function gcp() {
+    git add --update
+    gc $@
+    git push
+}
+
 # git commit all
 # $@ is optional commit message
 function gca() {
@@ -29,8 +38,9 @@ function gca() {
 }
 
 # git commit all and push. useful for quick fixes.
+# note: includes untracked files
 # $@ is optional commit message
-function gcp() {
+function gcap() {
     gca $@
     git push
 }
