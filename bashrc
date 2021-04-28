@@ -25,6 +25,7 @@ alias cfv="vim ~/.vimrc"
 alias v="vim"
 
 alias l="ls"
+alias ll="ls -al"
 alias ..="cd .."
 
 # show file tree without gitignored files
