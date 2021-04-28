@@ -65,7 +65,7 @@ nnoremap z9  :set foldlevel=9<CR><Esc>
 
 " terminal commands
 nnoremap <leader>t :call OpenTerminal()<cr>
-tnoremap <esc> <c-w>N
+"tnoremap <esc> <c-w>N
 
 " snippets
 let maplocalleader=","
