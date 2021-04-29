@@ -14,6 +14,12 @@ function gch() {
     git checkout $branch
 }
 
+# git commit inspect
+# $1 is commit reference (e.g. commit hash or branch name)
+function gci() {
+    git show --color -p $1
+}
+
 # git commit
 # $@ is optional commit message
 function gc() {
