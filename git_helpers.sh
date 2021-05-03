@@ -8,6 +8,23 @@ alias gl="git log --stat"
 alias gll="git log -1 --stat"
 alias glo="git log -20 --oneline"
 alias gs="git status"
+# git watch
+alias gw="watch --color -x bash -i -c 'gsd'"
+# added -i flag for bash above based on:
+# https://unix.stackexchange.com/questions/101620/how-to-load-bashrc-from-bash-c
+
+function horizontal_line() {
+    printf %$(tput cols)s\\n |tr " " "-"
+}
+
+# git status and diff with color
+function gsd() {
+    horizontal_line
+    git -c color.status=always status --short
+    horizontal_line
+    git diff --color
+    horizontal_line
+}
 
 function gch() {
     branch=$(git branch | fzf | sed 's/^..//')
