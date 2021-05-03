@@ -48,3 +48,5 @@ function venv() {
     source $env_name/bin/activate
 }
 
+alias is_on_fire="[ \$? != 0 ] && echo 🔥' '"
+PS1="\`is_on_fire\`\t\n$ "
