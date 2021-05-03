@@ -48,5 +48,20 @@ function venv() {
     source $env_name/bin/activate
 }
 
-alias is_on_fire="[ \$? != 0 ] && echo 🔥' '"
-PS1='$(is_on_fire)\[\e[0m\]\t \[\e[0;1;33m\]$(git branch --show) \[\e[0m\]\w\[\e[0m\]\n$ '
+
+# customizing prompt
+alias is_on_fire="[ \$? != 0 ] && echo '🔥 '"
+function prompt_git_branch() {
+    branch=$(git branch --show 2> /dev/null)
+    if [ branch != '' ]; then
+        echo -e "\e[0;1;30;43m $branch \e[0m"
+    fi
+}
+function prompt_timestamp() {
+    echo -e "\e[0;30;107m $(date +"%T") \e[0m"
+}
+function prompt_pwd() {
+    echo -e "\e[0;30;107m $(pwd) \e[0m"
+}
+PS1='\n$(is_on_fire)$(prompt_timestamp)$(prompt_git_branch)\e[0;30;107m \w \e[0m\n$ '
+
