@@ -59,8 +59,8 @@ function prompt_timestamp() {
     echo -e "\e[0;97;46m $(date +"%T") \e[0m"
 }
 function prompt_git_branch() {
-    branch=$(git branch --show 2> /dev/null)
-    if [ branch != '' ]; then
+    if git status &> /dev/null; then
+        branch=$(git branch --show)
         echo -e "\e[0;97;43m $branch \e[0m"
     fi
 }
