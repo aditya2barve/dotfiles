@@ -49,4 +49,4 @@ function venv() {
 }
 
 alias is_on_fire="[ \$? != 0 ] && echo 🔥' '"
-PS1="\$(is_on_fire)\t \w\n$ "
+PS1='$(is_on_fire)\[\e[0m\]\t \[\e[0;1;33m\]$(git branch --show) \[\e[0m\]\w\[\e[0m\]\n$ '
