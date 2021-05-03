@@ -49,4 +49,4 @@ function venv() {
 }
 
 alias is_on_fire="[ \$? != 0 ] && echo 🔥' '"
-PS1="\`is_on_fire\`\t\n$ "
+PS1="\`is_on_fire\`\t \w\n$ "
