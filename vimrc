@@ -30,6 +30,7 @@ vnoremap { di{}<esc>P
 " comment and uncomment visual selection
 autocmd FileType vim setlocal commentstring=\"%s
 autocmd FileType bash,python,sh,yaml setlocal commentstring=#%s
+autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " highlight trailing whitespace
 :highlight ExtraWhitespace ctermbg=red guibg=red
