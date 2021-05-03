@@ -49,7 +49,12 @@ function venv() {
 }
 
 # customize prompt
-alias is_on_fire="[ \$? != 0 ] && echo '🔥 '"
+function prompt_horizontal_line() {
+    printf %$(tput cols)s | tr " " "-"
+}
+function prompt_is_on_fire() {
+    [ $1 != 0 ] && echo 🔥
+}
 function prompt_timestamp() {
     echo -e "\e[0;97;46m $(date +"%T") \e[0m"
 }
@@ -59,8 +64,13 @@ function prompt_git_branch() {
         echo -e "\e[0;97;43m $branch \e[0m"
     fi
 }
-function prompt_horizontal_line() {
-    printf %$(tput cols)s\\n |tr " " "-"
+function generate_prompt() {
+    last_exit_code=$?
+    line=`prompt_horizontal_line`
+    fire=`prompt_is_on_fire $last_exit_code`
+    timestamp=`prompt_timestamp`
+    branch=`prompt_git_branch`
+    echo -e "$line\n$fire$timestamp$branch `pwd`\n$ "
 }
-PS1='$(prompt_horizontal_line)$(is_on_fire)$(prompt_timestamp)$(prompt_git_branch) \w\n$ '
+PS1='$(generate_prompt)'
 
