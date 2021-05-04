@@ -61,7 +61,9 @@ function prompt_timestamp() {
 function prompt_git_branch() {
     if git status &> /dev/null; then
         branch=$(git branch --show)
-        echo -e "\e[0;97;43m $branch \e[0m"
+        arr_branch_pieces=(${branch//// })
+        last_branch_piece=${arr_branch_pieces[-1]}
+        echo -e "\e[0;97;43m $last_branch_piece \e[0m"
     fi
 }
 function generate_prompt() {
