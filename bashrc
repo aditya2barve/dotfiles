@@ -70,7 +70,7 @@ function generate_prompt() {
     fire=`prompt_is_on_fire $last_exit_code`
     timestamp=`prompt_timestamp`
     branch=`prompt_git_branch`
-    echo -e "$line\n$fire$timestamp$branch `pwd`\n$ "
+    echo -e "\n$line\n$fire$timestamp$branch `pwd`\n$ "
 }
 PS1='$(generate_prompt)'
 
