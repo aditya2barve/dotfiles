@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function rpnew() {
     cd ~/repos
     [ -d "$1" ] && echo "repo already exists" && exit 1
