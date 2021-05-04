@@ -9,6 +9,7 @@ function open_in_browser() {
         # powershell.exe /c start $1
         return
     fi
+    # else assuming MacOS
     open -a firefox -g $1
 }
 
