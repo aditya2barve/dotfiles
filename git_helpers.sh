@@ -91,8 +91,12 @@ function rebase() {
     git rebase master
 }
 
-GIT_HOSTING_SERVICE=AzureDevOps # GitHub | AzureDevOps
-if [ $GIT_HOSTING_SERVICE = 'GitHub' ]; then
+config=$REPOS_DIR/dotfiles/config.sh
+[ -f $config ] && source $config
+
+if [ -z "$GIT_HOSTING_SERVICE" ]; then
+    echo "warning: git hosting service not defined"
+elif [ $GIT_HOSTING_SERVICE = 'GitHub' ]; then
     helper=$REPOS_DIR/dotfiles/github_helpers.sh
     [ -f $helper ] && source $helper
 elif [ $GIT_HOSTING_SERVICE = 'AzureDevOps' ]; then

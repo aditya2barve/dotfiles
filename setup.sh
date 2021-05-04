@@ -58,5 +58,9 @@ make install
 cd ..
 rm -rf Dockerfile.vim
 
+# create config if not exists
+config=$REPOS_DIR/dotfiles/config.sh
+[ -f $config ] || echo "GIT_HOSTING_SERVICE=GitHub # GitHub | AzureDevOps" > $config
+
 echo "setup complete!"
 
