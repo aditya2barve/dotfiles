@@ -2,7 +2,7 @@
 
 function rpnew() {
     cd ~/repos
-    [ -d "$1" ] && echo "repo already exists" && exit 1
+    [ -d "$1" ] && echo "repo already exists" && return 1
     git init $1
     cd $1
     gh repo create $1 --confirm --private
