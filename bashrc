@@ -66,13 +66,25 @@ function prompt_git_branch() {
         echo -e "\e[0;97;43m $last_branch_piece \e[0m"
     fi
 }
+function prompt_pwd() {
+    full_path=`pwd`
+    if [ "$SHOW_FULL_PATH" = true ]; then
+        echo $full_path
+        return
+    fi
+
+    path_pieces=(${full_path//// })
+    last_path_piece=${path_pieces[-1]}
+    echo "$last_path_piece"
+}
 function generate_prompt() {
     last_exit_code=$?
     line=`prompt_horizontal_line`
     fire=`prompt_is_on_fire $last_exit_code`
     timestamp=`prompt_timestamp`
     branch=`prompt_git_branch`
-    echo -e "\n$line\n$fire$timestamp$branch `pwd`\n$ "
+    my_pwd=`prompt_pwd`
+    echo -e "\n$line\n$fire$timestamp$branch $my_pwd\n$ "
 }
 PS1='$(generate_prompt)'
 
