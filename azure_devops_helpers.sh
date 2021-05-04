@@ -32,7 +32,7 @@ function prshow() {
 
     if [ $pr_id = null ]; then
         echo no PR found for current branch. creating one now.
-        pr_id=`az repos pr create --draft true --title "$1" | jq '.pullRequestId'` && az repos pr show --id $pr_id --open > /dev/null
+        pr_id=`az repos pr create --draft true --title "$branch_name" | jq '.pullRequestId'` && az repos pr show --id $pr_id --open > /dev/null
     else
         az repos pr show --id $pr_id --open > /dev/null
     fi
