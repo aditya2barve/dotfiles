@@ -91,7 +91,11 @@ function rebase() {
     git rebase master
 }
 
-GIT_HOSTING_SERVICE=GitHub # GitHub | AzureDevOps
+GIT_HOSTING_SERVICE=AzureDevOps # GitHub | AzureDevOps
 if [ $GIT_HOSTING_SERVICE = 'GitHub' ]; then
-    [ -f ./github_helpers.sh ] && source ./github_helpers.sh
+    helper=$REPOS_DIR/dotfiles/github_helpers.sh
+    [ -f $helper ] && source $helper
+elif [ $GIT_HOSTING_SERVICE = 'AzureDevOps' ]; then
+    helper=$REPOS_DIR/dotfiles/azure_devops_helpers.sh
+    [ -f $helper ] && source $helper
 fi
