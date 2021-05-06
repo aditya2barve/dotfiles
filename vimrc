@@ -242,3 +242,5 @@ function! SmartFold()
 endfunction
 
 autocmd VimEnter * :call SmartFold()
+
+set cursorline
