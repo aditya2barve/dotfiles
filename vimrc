@@ -31,7 +31,6 @@ vnoremap { di{}<esc>P
 autocmd FileType vim setlocal commentstring=\"%s
 autocmd FileType bash,python,sh,yaml,Dockerfile setlocal commentstring=#%s
 autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2
-autocmd BufWritePre *.java :normal gg=G
 
 " highlight trailing whitespace
 :highlight ExtraWhitespace ctermbg=red guibg=red
