@@ -77,6 +77,8 @@ nnoremap <localleader>def
     \ :-1read ~/.vim/my-snippets/python/function.txt<cr>wcw
 nnoremap <localleader>main
     \ :-1read ~/.vim/my-snippets/python/main.txt<cr>
+nnoremap <localleader>jmain
+    \ :-1read ~/.vim/my-snippets/java/main.txt<cr>
 
 "search
 set hlsearch
