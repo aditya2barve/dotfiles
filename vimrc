@@ -246,3 +246,12 @@ endfunction
 autocmd VimEnter * :call SmartFold()
 
 set cursorline
+
+" function! <SID>StripTrailingWhitespaces()
+"   if !&binary && &filetype != 'diff'
+"     let l:save = winsaveview()
+"     keeppatterns %s/\s\+$//e
+"     call winrestview(l:save)
+"   endif
+" endfun
+" autocmd FileType python,java autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
