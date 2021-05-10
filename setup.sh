@@ -51,6 +51,9 @@ ln -s ~/repos/dotfiles/coc-settings.json ~/.vim/
 mkdir -p ~/.vim/syntax
 curl "https://raw.githubusercontent.com/vim-python/python-syntax/master/syntax/python.vim" -o ~/.vim/syntax/python.vim
 
+# install AutoClose for vim
+git clone https://github.com/vim-scripts/AutoClose.git ~/.vim/pack/vendor/start/AutoClose
+
 # teach vim to recognize Dockerfiles
 git clone https://github.com/ekalinin/Dockerfile.vim.git
 cd Dockerfile.vim
