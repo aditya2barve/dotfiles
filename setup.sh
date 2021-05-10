@@ -54,6 +54,9 @@ curl "https://raw.githubusercontent.com/vim-python/python-syntax/master/syntax/p
 # install AutoClose for vim
 git clone https://github.com/vim-scripts/AutoClose.git ~/.vim/pack/vendor/start/AutoClose
 
+# install clever-f.vim
+git clone https://github.com/rhysd/clever-f.vim.git ~/.vim/pack/vendor/start/clever-f.vim
+
 # teach vim to recognize Dockerfiles
 git clone https://github.com/ekalinin/Dockerfile.vim.git
 cd Dockerfile.vim
