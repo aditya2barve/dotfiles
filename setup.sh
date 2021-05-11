@@ -68,5 +68,10 @@ rm -rf Dockerfile.vim
 config=$REPOS_DIR/dotfiles/config.sh
 [ -f $config ] || echo "GIT_HOSTING_SERVICE=GitHub # GitHub | AzureDevOps" > $config
 
-echo "setup complete!"
+# install autojump
+git clone git://github.com/wting/autojump.git $REPOS_DIR/autojump
+cd $REPOS_DIR/autojump
+./install.py
+cd -
 
+echo "setup complete!"

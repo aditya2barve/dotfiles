@@ -88,3 +88,4 @@ function generate_prompt() {
 }
 PS1='$(generate_prompt)'
 
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
