@@ -6,6 +6,10 @@
     ],
     "pyright.organizeimports.provider": "isort",
     "python.formatting.blackPath": "/usr/local/bin/black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "120"
+    ],
     "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
     "python.sortImports.path": "/usr/local/bin/isort",
