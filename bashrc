@@ -44,7 +44,7 @@ function venv() {
         return
     fi
     env_name=${1:-myenv}
-    [ -d $env_name ] || virtualenv $env_name
+    [ -d $env_name ] || python3 -m venv $env_name
     source $env_name/bin/activate
 }
 
