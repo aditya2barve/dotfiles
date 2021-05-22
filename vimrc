@@ -259,6 +259,6 @@ set cursorline
 " endfun
 " autocmd FileType python,java autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
-# pressing `yc` in command mode duplicates the line
-# and comments out the duplicate.
+" pressing `yc` in command mode duplicates the line
+" and comments out the duplicate.
 nnoremap yc :normal mayygccp`aj<cr>
