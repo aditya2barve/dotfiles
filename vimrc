@@ -59,7 +59,7 @@ nnoremap <leader>l <c-w><c-l>
 
 " folding support
 set foldmethod=indent
-set foldnestmax=2
+set foldnestmax=3
 nnoremap z0  :set foldlevel=0<CR><Esc>
 nnoremap z1  :set foldlevel=1<CR><Esc>
 nnoremap z2  :set foldlevel=2<CR><Esc>
@@ -258,3 +258,7 @@ set cursorline
 "   endif
 " endfun
 " autocmd FileType python,java autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
+" pressing `yc` in command mode duplicates the line
+" and comments out the duplicate.
+nnoremap yc :normal mayygccp`aj<cr>
