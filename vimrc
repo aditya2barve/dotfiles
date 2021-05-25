@@ -59,7 +59,7 @@ nnoremap <leader>l <c-w><c-l>
 
 " folding support
 set foldmethod=indent
-set foldnestmax=2
+set foldnestmax=3
 nnoremap z0  :set foldlevel=0<CR><Esc>
 nnoremap z1  :set foldlevel=1<CR><Esc>
 nnoremap z2  :set foldlevel=2<CR><Esc>
