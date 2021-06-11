@@ -62,6 +62,11 @@ function prompt_timestamp() {
 }
 function prompt_git_branch() {
     if git status &> /dev/null; then
+        status=$(git status)
+        if [[ "$status" =~ "HEAD detached" ]]; then
+            echo -e "\e[0;97;43m HEAD detached \e[0m"
+            return
+        fi
         branch=$(git branch --show)
         arr_branch_pieces=(${branch//// })
         last_branch_piece=${arr_branch_pieces[-1]}
