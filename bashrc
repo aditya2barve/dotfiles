@@ -46,6 +46,8 @@ function venv() {
     env_name=${1:-myenv}
     [ -d $env_name ] || python3 -m venv $env_name
     source $env_name/bin/activate
+    pip install -q -U pip
+    [ -f requirements.txt ] && pip install -q -r requirements.txt
 }
 
 # customize prompt
