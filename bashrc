@@ -44,7 +44,7 @@ function venv() {
         return
     fi
     env_name=${1:-myenv}
-    [ -d $env_name ] || python3 -m venv $env_name
+    [ -d $env_name ] || (python3 -m venv $env_name && echo "*" > $env_name/.gitignore)
     source $env_name/bin/activate
     pip install -q -U pip
     [ -f requirements.txt ] && pip install -q -r requirements.txt
