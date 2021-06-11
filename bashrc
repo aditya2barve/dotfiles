@@ -73,6 +73,11 @@ function prompt_git_branch() {
         echo -e "\e[0;97;43m $last_branch_piece \e[0m"
     fi
 }
+function prompt_venv() {
+    [ -z $VIRTUAL_ENV ] && return
+    env_name=`basename $VIRTUAL_ENV`
+    echo -e "\e[0;97;46m $env_name \e[0m"
+}
 function prompt_pwd() {
     full_path=`pwd`
     if [ "$SHOW_FULL_PATH" = true ]; then
@@ -90,9 +95,11 @@ function generate_prompt() {
     fire=`prompt_is_on_fire $last_exit_code`
     timestamp=`prompt_timestamp`
     branch=`prompt_git_branch`
+    venv_name=`prompt_venv`
     my_pwd=`prompt_pwd`
-    echo -e "\n$line\n$fire$timestamp$branch $my_pwd\n$ "
+    echo -e "\n$line\n$fire$timestamp$branch$venv_name $my_pwd\n$ "
 }
+export VIRTUAL_ENV_DISABLE_PROMPT=true
 PS1='$(generate_prompt)'
 
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
