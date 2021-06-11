@@ -91,13 +91,13 @@ function prompt_pwd() {
 }
 function generate_prompt() {
     last_exit_code=$?
-    line=`prompt_horizontal_line`
+    # line=`prompt_horizontal_line`
     fire=`prompt_is_on_fire $last_exit_code`
     timestamp=`prompt_timestamp`
     branch=`prompt_git_branch`
     venv_name=`prompt_venv`
     my_pwd=`prompt_pwd`
-    echo -e "\n$line\n$fire$timestamp$branch$venv_name $my_pwd\n$ "
+    echo -e "\n$fire$timestamp$branch$venv_name $my_pwd\n$ "
 }
 export VIRTUAL_ENV_DISABLE_PROMPT=true
 PS1='$(generate_prompt)'
