@@ -3,6 +3,7 @@
 alias ga="git add"
 alias gcu="git reset HEAD~1"
 alias gd="git diff"
+alias gdc="git diff --cached"
 alias gdd="git difftool"
 alias gl="git log --stat"
 alias gll="git log -1 --stat"
