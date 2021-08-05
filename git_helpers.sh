@@ -77,19 +77,27 @@ function branch_here() {
     git push --set-upstream origin $full_branch_name
 }
 
+function get_default_branch_name() {
+    if git branch --all | grep -q master; then
+        echo master
+    elif git branch --all | grep -q main; then
+        echo main
+    fi
+}
+
 # $1 is branch name without prefix
 function branch() {
-    git checkout master
+    git checkout `get_default_branch_name`
     branch_here $1
 }
 
 # checkout master; pull; rebase current branch onto master
 function rebase() {
     current_branch=`git branch --show-current`
-    git checkout master
+    git checkout `get_default_branch_name`
     git pull
     git checkout $current_branch
-    git rebase master
+    git rebase `get_default_branch_name`
 }
 
 config=$REPOS_DIR/dotfiles/config.sh

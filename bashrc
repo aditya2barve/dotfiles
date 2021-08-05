@@ -103,3 +103,8 @@ export VIRTUAL_ENV_DISABLE_PROMPT=true
 PS1='$(generate_prompt)'
 
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
+
+function utc2local() {
+    utc_time="$1"
+    date +"%a %x %r" -d "$utc_time +0"
+}
