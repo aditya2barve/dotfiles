@@ -1,3 +1,4 @@
 *.swp
 coc-settings.json
 config.sh
+.DS_Store
