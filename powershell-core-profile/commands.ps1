@@ -56,8 +56,11 @@ function branch {
 }
 
 function rebase() {
-    git pull origin $(Get-GitDefaultBranch)
-    git rebase $(Get-GitDefaultBranch)
+    $master = $(Get-GitDefaultBranch)
+    git checkout $master
+    git pull origin $master
+    git checkout -
+    git rebase $master
 }
 
 function New-GitCommit() {
