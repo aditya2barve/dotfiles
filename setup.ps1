@@ -1,3 +1,10 @@
+# install dependencies
+Write-Host "Installing dependencies. This might take a few minutes."
+Install-Module ZLocation -Scope CurrentUser -Force
+Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force
+Write-Host "Finished installing dependencies."
+
+# add entrypoint.ps1 to profile
 $setupLine = ". $PSScriptRoot/src/entrypoint.ps1"
 $profileFile = $PROFILE.CurrentUserAllHosts
 
