@@ -1,10 +1,3 @@
-# using PowerShell 7.1.3
-
-Import-Module ZLocation
-
-# use shortcut 'j' for ZLocation
-Set-Alias -Name j -Value Invoke-ZLocation
-
 # git shortcuts
 # ref: https://stackoverflow.com/questions/2858484/creating-aliases-in-powershell-for-git-commands
 function ga { & git add $args }
@@ -133,38 +126,4 @@ function Prompt {
     $promptString += "$ "
 
     $promptString
-}
-
-function venv {
-    param (
-        [string]
-        $environmentName = "myenv"
-    )
-
-    if (!$null -eq $env:VIRTUAL_ENV) {
-        Write-Host "virtualenv is already active: $VIRTUAL_ENV"
-        return
-    }
-
-    if (!(Test-Path $environmentName -PathType Container)) {
-        Write-Host "creating virtual environment."
-        python3 -m venv $environmentName
-    }
-
-    . "$environmentName/bin/Activate.ps1"
-}
-
-function watch {
-    param (
-        [string]
-        $Command = "Get-Date",
-        [int]
-        $Interval = 2
-    )
-
-    while ($true) {
-        Clear-Host
-        Invoke-Expression $Command
-        Start-Sleep -Seconds $Interval
-    }
 }
