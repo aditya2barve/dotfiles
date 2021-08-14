@@ -1,46 +1,31 @@
 # dotfiles
 
-## bat
+## Prerequisites
 
-Download latest [release](https://github.com/sharkdp/bat/releases).
+### PowerShell Core (PowerShell 7)
 
-```bash
-sudo dpkg -i bat*amd64.deb # (for desktop)
+Instructions: https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.1
+
+### [ZLocation](https://github.com/vors/ZLocation) module for PowerShell
+
+Install in Powershell.
+```powershell
+Install-Module ZLocation -Scope CurrentUser
 ```
 
-## ripgrep
+### [Az module](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-6.3.0) for PowerShell
 
-```bash
-sudo apt install ripgrep
+Install in Powershell.
+```powershell
+Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force
 ```
 
-## COC
+## Installation
 
-Install nodejs LTS version. On Ubuntu:
+git clone {repo}
 
-```bash
-curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
-sudo apt install -y nodejs
-node -v
+Run setup in Powershell.
+```powershell
+cd {repo}\powershell-core-profile\
+.\setup.ps1
 ```
-
-Install these extensions.
-
-- coc-markdownlint 1.11.1
-- coc-yaml 1.3.1
-- coc-vimlsp 0.12.2
-- coc-sh 0.6.0
-- coc-pyright 1.1.133
-- coc-json 1.3.4
-
-For coc-pyright, install and link black and isort:
-
-```bash
-pip install black
-sudo ln -s `which black` /usr/local/bin/black
-
-pip install isort
-sudo ln -s `which isort` /usr/local/bin/isort
-```
-
-For coc-sh, install bash-language-server using `npm i -g bash-language-server`
