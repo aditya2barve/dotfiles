@@ -3,3 +3,4 @@
 . $PSScriptRoot/venv.ps1
 . $PSScriptRoot/watch.ps1
 . $PSScriptRoot/zlocation.ps1
+. $PSScriptRoot/test-command.ps1
