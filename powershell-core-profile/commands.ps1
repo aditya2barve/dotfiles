@@ -1,5 +1,7 @@
 # using PowerShell 7.1.3
 
+Import-Module ZLocation
+
 # use shortcut 'j' for ZLocation
 Set-Alias -Name j -Value Invoke-ZLocation
 

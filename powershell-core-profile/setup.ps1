@@ -1,8 +1,12 @@
-$setupAlreadyExists = (Get-Content -Path $PROFILE.CurrentUserAllHosts) -match "commands.ps1"
-if ($setupAlreadyExists) {
-    Write-Host "setup already exists."
-    return
+$setupLine = ". $PSScriptRoot/commands.ps1"
+$profileFile = $PROFILE.CurrentUserAllHosts
+
+if ((Get-Content -Path $profileFile) -match $setupLine) {
+    Write-Host "Profile already contains setup line."
+}
+else {
+    Write-Host "Adding setup line to profile."
+    Add-Content -Path $profileFile -Value $setupLine
 }
 
-Get-Content -Path ./appendToProfile.ps1 | Add-Content -Path $PROFILE.CurrentUserAllHosts
-Write-Host "appended to profile."
+Write-Host "Setup complete."
