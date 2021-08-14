@@ -1,4 +1,4 @@
-$setupLine = ". $PSScriptRoot/commands.ps1"
+$setupLine = ". $PSScriptRoot/entrypoint.ps1"
 $profileFile = $PROFILE.CurrentUserAllHosts
 
 if ((Get-Content -Path $profileFile) -match $setupLine) {
