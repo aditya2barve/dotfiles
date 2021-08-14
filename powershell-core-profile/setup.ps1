@@ -1,8 +1,8 @@
 $setupAlreadyExists = (Get-Content -Path $PROFILE.CurrentUserAllHosts) -match "commands.ps1"
-if (!$setupAlreadyExists) {
-    Get-Content -Path ./appendToProfile.ps1 | Add-Content -Path $PROFILE.CurrentUserAllHosts
-    Write-Host "appended to profile."
+if ($setupAlreadyExists) {
+    Write-Host "setup already exists."
 }
 else {
-    Write-Host "setup already exists."
+    Get-Content -Path ./appendToProfile.ps1 | Add-Content -Path $PROFILE.CurrentUserAllHosts
+    Write-Host "appended to profile."
 }
