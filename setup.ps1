@@ -24,6 +24,12 @@ $setupLine = ". $PSScriptRoot/src/entrypoint.ps1"
 $profileFile = $PROFILE.CurrentUserAllHosts
 Write-Host "Updating profile at $profileFile."
 
+if(!(test-path $profileFile))
+{
+    # Create empty file and parent directories as required.
+    New-Item -ItemType File -Force -Path $profileFile
+}
+
 if ((Get-Content -Path $profileFile) -match $setupLine) {
     Write-Host "Profile already contains entrypoint.ps1."
 }
