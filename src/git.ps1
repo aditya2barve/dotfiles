@@ -9,6 +9,7 @@ function gll { & git log -1 --stat $args }
 function glo { & git log -20 --oneline $args }
 function gs { & git status $args }
 function gch { & git checkout $args }
+function gb { & git branch $args }
 
 function Get-GitDefaultBranch {
     $branches = git branch
