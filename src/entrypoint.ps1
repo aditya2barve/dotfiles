@@ -4,3 +4,4 @@
 . $PSScriptRoot/watch.ps1
 . $PSScriptRoot/zlocation.ps1
 . $PSScriptRoot/test-command.ps1
+. $PSScriptRoot/azure-devops.ps1
